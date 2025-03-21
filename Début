@@ -1,1 +1,7 @@
-#test 
+res = []
+
+with open(r"donnees_formule_un\circuits.csv", 'r') as file:
+    for line in file:
+        res.append(line.strip('\n').split(','))
+
+print(res[0])
