@@ -1,3 +1,5 @@
+import pandas as pd
+
 res_circuits = []
 
 with open(r"donnees_formule_un\circuits.csv", 'r') as file:
