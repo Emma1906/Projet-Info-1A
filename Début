@@ -1,7 +1,44 @@
-res = []
+res_circuits = []
 
 with open(r"donnees_formule_un\circuits.csv", 'r') as file:
     for line in file:
-        res.append(line.strip('\n').split(','))
+        res_circuits.append(line.strip('\n').split(','))
 
-print(res[0])
+print('circuits')
+print(res_circuits[0])
+
+res_constructor = []
+
+with open(r"donnees_formule_un\constructors.csv", 'r') as constructors:
+    for line in constructors:
+        res_constructor.append(line.strip('\n').split(','))
+
+print('constructors')
+print(res_constructor[0])
+
+res_drivers = []
+
+with open(r"donnees_formule_un\drivers.csv", 'r') as drivers:
+    for line in drivers:
+        res_drivers.append(line.strip('\n').split(','))
+
+print('drivers')
+print(res_drivers[0])
+
+res_results = []
+
+with open(r"donnees_formule_un\results.csv", 'r') as results:
+    for line in results:
+        res_results.append(line.strip('\n').split(','))
+
+print('results')
+print(res_results[0])
+
+res_status = []
+
+with open(r"donnees_formule_un\status.csv", 'r') as status:
+    for line in status:
+        res_status.append(line.strip('\n').split(','))
+
+print('status')
+print(res_status[0])
