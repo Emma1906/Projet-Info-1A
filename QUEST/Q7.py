@@ -38,6 +38,9 @@ df_pits_stops_consresults = pd.merge(df_pits_stops_races, df_consresults, on="ra
 df_pits_stops_constructors = pd.merge(
     df_pits_stops_consresults, df_constructors, on="constructorId"
 )
+# df_pits_stop_races est la jointure de :
+# pit_stop + races + constructor_results + constructors
+
 
 df_pits_stops_constructors_2023 = df_pits_stops_constructors[
     df_pits_stops_constructors["year"] == 2023
