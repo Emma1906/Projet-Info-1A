@@ -13,9 +13,6 @@ chemin_fichier_results = "C:/Users/emmag/OneDrive/Bureau/Documents/Projet info 1
 # Lire le fichier CSV avec Pandas
 results = pd.read_csv(chemin_fichier_results)
 
-# Afficher les premières lignes du DataFrame
-print(results.head())
-
 def pilotes_30_victoires(results):
     # Compter le nombre de victoires par pilote
     victoires = results[results['positionOrder'] == 1].groupby('driverId').size()
@@ -37,11 +34,14 @@ def nom_pilotes_30_victoires(results, drivers):
     
     # Filtrer le DataFrame des pilotes pour obtenir les noms
     pilotes_info = drivers[drivers['driverId'].isin(pilotes_30_victoire)]\
-        [['forename','surname']]
+        [['forename','surname', 'driverId']]
+    victoires = results[results['positionOrder'] == 1].groupby('driverId').size()
+    pilotes_info['victoires'] = pilotes_info['driverId'].map(victoires)
+    noms_pilotes_victoires = pilotes_info.apply(
+        lambda row: f"{row['forename']} {row['surname']} ({row['victoires']} victoires)", axis=1
+    ).tolist()
     
-    noms_pilotes = pilotes_info.apply(lambda row:  f"{row['forename']} {row['surname']}", axis=1).tolist()
-    
-    return noms_pilotes
+    return noms_pilotes_victoires
 
 nom_30_victoires = nom_pilotes_30_victoires(results, drivers)
 print (nom_30_victoires)
