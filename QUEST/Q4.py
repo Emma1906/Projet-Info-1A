@@ -4,10 +4,8 @@ import pandas as pd
 # chaque circuit sur l'année 2023 ?
 
 
-laps = pd.read_csv("C:/Users/User/Desktop/PROJET INFO/donnees_form\
-        ule_un/donnees_formule_un/lap_times.csv")
-races = pd.read_csv("C:/Users/User/Desktop/PROJET INFO/donnees_for\
-        mule_un/donnees_formule_un/races.csv")
+laps = pd.read_csv("C:/Users/User/Desktop/PROJET INFO/donnees_formule_un/donnees_formule_un/lap_times.csv")
+races = pd.read_csv("C:/Users/User/Desktop/PROJET INFO/donnees_formule_un/donnees_formule_un/races.csv")
 
 fusion = pd.merge(laps, races, on='raceId')
 
