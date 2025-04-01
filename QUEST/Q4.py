@@ -1,15 +1,13 @@
 import pandas as pd
 import os
 
-# Question 4 : quels sont les meilleurs temps d'un tour de circuit pour
+# Question 4 : Quels sont les meilleurs temps d'un tour de circuit (best lap time) pour
 # chaque circuit sur l'année 2023 ?
 
 # charger et fusionner les tables
 laps = pd.read_csv(os.path.join("donnees_formule_un", "lap_times.csv"))
 races = pd.read_csv(os.path.join("donnees_formule_un", "races.csv"))
 fusion = pd.merge(laps, races, on='raceId')
-
-print(fusion.columns)
 
 # Extraire les années des courses
 annees_courses = fusion[[' year', 'raceId', ' name                           ']].drop_duplicates()
