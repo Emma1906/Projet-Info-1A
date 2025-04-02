@@ -28,4 +28,4 @@ victoire_nation = (
     .sort_values(by="Nombre de victoires par nation", ascending=False)
 )
 
-print(victoire_nation)
+print(victoire_nation.head())
