@@ -1,14 +1,14 @@
 questions formule 1
-V #1 pilotes qui ont gagné au moins 30 courses
-V #2 classements des pilotes à l'issue de la saison 2023
+V #1 Quels sont les pilotes qui ont gagné au moins 30 courses ? 
+V #2 Quel est le classements des pilotes à l'issue de la saison 2023 ? 
 #3 classement des écuries à l'issue de la saison 2023
-V #4 quels sont les meilleurs temps d'un tour de circuit pour les circuits en 2023 ? 
-V #5 qui a fait le plus de meilleurs temps sur l'année 2023 ?
-V #6 Qui a remporté le plus de fois le circuit de Spafrancorchamp ?
-X #7 temps moyen des pits stop en fonction des écuries ?
-#8 temps moyen des pit stop par an ? (évoltion)
-V #9 quel circuit a été le plus de fois concouru 
+V #4 Quels sont les meilleurs temps d'un tour de circuit pour l'ensemble des circuits en 2023 ? 
+V #5 Qui a fait le plus de meilleurs temps (best lap time) sur l'année 2023 ?
+V #6 Qui a remporté le plus de fois le circuit de Spa-Francorchamp ?
+X #7 Quel est le temps moyen des pits stop en fonction des écuries ?
+#8 temps moyen des pit stop par an ? (évolution)
+V #9 Quel circuit a été le plus de fois concouru ? 
 #10 différence de temps entre 1 et dernier
-V #11 nombre de victoires par nations
-#12 quel est l'âge moyen des pilotes ?????????
-#13 qui a eu le plus d'accidents en fonction des années?s
+V #11 Quelles nations ont le plus grand nombre de victoires ?
+V #12 Quel est l'âge moyen des pilotes en 2023, 2000, 1980 et 1950 ? 
+#13 qui a eu le plus d'accidents en fonction des années ?
