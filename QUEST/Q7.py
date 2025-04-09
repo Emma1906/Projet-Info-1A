@@ -6,6 +6,7 @@ import os
 # On va faire un groupby sur le nom de l'écurie
 
 df_pits_stops = pd.read_csv(os.path.join("donnees_formule_un", "pit_stops.csv"))
+df_pits_stops.columns = df_pits_stops.columns.str.strip()
 
 chemin_fichier_consresults = (
     r"C:\Users\djoud\OneDrive\Bureau\ENSAI\1A\projet\Projet info\Projet-Info-1A"
