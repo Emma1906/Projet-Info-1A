@@ -1,11 +1,9 @@
 import pandas as pd
+import os
 
 # Charger les données
-chemin_fichier_results = (
-    r"C:\Users\djoud\OneDrive\Bureau\ENSAI\1A\projet\Projet info\Projet-Info-1A"
-    r"\donnees_formule_un\results.csv"
-)
-df_results = pd.read_csv(chemin_fichier_results)
+df_results = pd.read_csv(os.path.join("donnees_formule_un", "results.csv"))
+
 
 # Afficher les colonnes pour vérifier leur nom
 print(df_results.columns)
