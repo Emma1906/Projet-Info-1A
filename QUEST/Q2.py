@@ -60,3 +60,4 @@ classement = points_totals.sort_values(by=' points', ascending=False).reset_inde
 print(classement[['nom_complet', ' points']])
 
 
+

@@ -3,15 +3,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 import seaborn as sns
-
+import os
 
 #1 pilotes qui ont gagné au moins 30 courses
 
 
-chemin_fichier_results = "C:/Users/emmag/OneDrive/Bureau/Documents/Projet info 1A/Projet-Info-1A/donnees_formule_un/results.csv"
-
 # Lire le fichier CSV avec Pandas
-results = pd.read_csv(chemin_fichier_results)
+results = pd.read_csv(os.path.join("donnees_formule_un", "results.csv"))
 
 def pilotes_30_victoires(results):
     # Compter le nombre de victoires par pilote
@@ -22,11 +20,9 @@ def pilotes_30_victoires(results):
     
     return pilotes_30_victoires
 
-chemin_fichier_drivers = "C:\\Users\\emmag\\OneDrive\\Bureau\\Documents\\Projet info 1A\\Projet-Info-1A\\donnees_formule_un\\drivers.csv"
 
 # Lire le fichier CSV avec Pandas
-drivers = pd.read_csv(chemin_fichier_drivers)
-
+drivers = pd.read_csv(os.path.join("donnees_formule_un", "drivers.csv"))
 #cherchons le nom des pilotes qui ont gagné au moins 30 courses
 
 def nom_pilotes_30_victoires(results, drivers):

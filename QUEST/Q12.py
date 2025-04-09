@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 
 # 1 : Chargement et fusion des tables
-drivers = pd.read_csv("C:/Users/User/Desktop/PROJET INFO/donnees_formule_un/donnees_formule_un/drivers.csv")
+drivers = pd.read_csv(os.path.join("donnees_formule_un", "drivers.csv"))
 results = pd.read_csv(os.path.join("donnees_formule_un", "results.csv"))
 results.rename(columns={' driverId': 'driverId'}, inplace=True)
 fusion_1 = pd.merge(drivers, results, on='driverId')

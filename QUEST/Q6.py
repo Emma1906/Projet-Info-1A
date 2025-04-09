@@ -1,14 +1,15 @@
 import pandas as pd
+import os
 
 # Question 6 : Qui a remporté le plus de fois le circuit de Spa-Francorchamps,
 # entre 1950 et 2024 ?
 
 # ## chargement modification et fusion des tables
-drivers = pd.read_csv("C:/Users/User/Desktop/PROJET INFO/donnees_formule_un/donnees_formule_un/drivers.csv")
+drivers = pd.read_csv(os.path.join("donnees_formule_un", "drivers.csv"))
 drivers["nom_complet"] = drivers["forename"] + " " + drivers["surname"]
 
-results = pd.read_csv("C:/Users/User/Desktop/PROJET INFO/donnees_formule_un/donnees_formule_un/results.csv")
-races = pd.read_csv("C:/Users/User/Desktop/PROJET INFO/donnees_formule_un/donnees_formule_un/races.csv")
+results = pd.read_csv(os.path.join("donnees_formule_un", "results.csv"))
+races = pd.read_csv(os.path.join("donnees_formule_un", "races.csv"))
 
 fusion = pd.merge(results, races, on='raceId')
 spa_gagnant = pd.merge(drivers, fusion, on='driverId')

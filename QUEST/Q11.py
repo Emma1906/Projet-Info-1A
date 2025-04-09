@@ -4,7 +4,7 @@ import os
 # Question 11 : Quel est le nombre de victoires par nation, entre 1950 et 2024 ?
 
 # 1 : Jointure des tables
-drivers = pd.read_csv("C:/Users/User/Desktop/PROJET INFO/donnees_formule_un/donnees_formule_un/drivers.csv")
+drivers = pd.read_csv(os.path.join("donnees_formule_un", "drivers.csv"))
 drivers["nom_complet"] = drivers["forename"] + " " + drivers["surname"]
 """print(drivers.columns)"""
 
