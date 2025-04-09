@@ -3,7 +3,9 @@ import os
 
 # Charger et fusionner les tables
 laps = pd.read_csv(os.path.join("donnees_formule_un", "lap_times.csv"))
+laps.columns = laps.columns.str.strip()
 races = pd.read_csv(os.path.join("donnees_formule_un", "races.csv"))
+races.columns = races.columns.str.strip()
 fusion = pd.merge(laps, races, on='raceId')
 
 # Correction des noms de colonnes si nécessaire
@@ -12,7 +14,8 @@ fusion.rename(columns={' name                           ': 'name'}, inplace=True
 fusion.rename(columns={' milliseconds': 'milliseconds'}, inplace=True)
 fusion.rename(columns={' year': 'year'}, inplace=True)
 
-drivers = pd.read_csv("C:/Users/User/Desktop/PROJET INFO/donnees_formule_un/donnees_formule_un/drivers.csv")
+drivers = pd.read_csv(os.path.join("donnees_formule_un", "drivers.csv"), on_bad_lines='skip')
+drivers.columns = drivers.columns.str.strip()
 drivers["nom_complet"] = drivers["forename"] + " " + drivers["surname"]
 
 # Fusionner les données avec les pilotes
