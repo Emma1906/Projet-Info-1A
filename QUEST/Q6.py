@@ -5,11 +5,16 @@ import os
 # entre 1950 et 2024 ?
 
 # ## chargement modification et fusion des tables
-drivers = pd.read_csv(os.path.join("donnees_formule_un", "drivers.csv"))
+drivers = pd.read_csv(os.path.join("donnees_formule_un", "drivers.csv"), on_bad_lines='skip')
+drivers.columns = drivers.columns.str.strip()
+
 drivers["nom_complet"] = drivers["forename"] + " " + drivers["surname"]
 
 results = pd.read_csv(os.path.join("donnees_formule_un", "results.csv"))
+
+results.columns = results.columns.str.strip()
 races = pd.read_csv(os.path.join("donnees_formule_un", "races.csv"))
+races.columns = races.columns.str.strip()
 
 fusion = pd.merge(results, races, on='raceId')
 spa_gagnant = pd.merge(drivers, fusion, on='driverId')

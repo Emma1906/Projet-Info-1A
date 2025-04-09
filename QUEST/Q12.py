@@ -3,12 +3,14 @@ import os
 from datetime import datetime
 
 # 1 : Chargement et fusion des tables
-drivers = pd.read_csv(os.path.join("donnees_formule_un", "drivers.csv"))
+drivers = pd.read_csv(os.path.join("donnees_formule_un", "drivers.csv"), on_bad_lines='skip')
+drivers.columns = drivers.columns.str.strip()
 results = pd.read_csv(os.path.join("donnees_formule_un", "results.csv"))
-results.rename(columns={' driverId': 'driverId'}, inplace=True)
+results.columns = results.columns.str.strip()
 fusion_1 = pd.merge(drivers, results, on='driverId')
-fusion_1.rename(columns={' raceId': 'raceId'}, inplace=True)
+
 races = pd.read_csv(os.path.join("donnees_formule_un", "races.csv"))
+races.columns = races.columns.str.strip()
 fusion_2 = pd.merge(fusion_1, races, on='raceId')
 
 # 2 : Vérifier les doublons
@@ -16,10 +18,12 @@ drivers_unique = fusion_2.drop_duplicates(subset=["driverId"])
 """print(drivers_unique.duplicated(subset=["driverId"]).sum())"""
 
 # 3 : Filtrer sur l'année 2023
-driver_unique_2023 = drivers_unique[drivers_unique[' year'] == 2023].copy()
+driver_unique_2023 = drivers_unique[drivers_unique['year'] == 2023].copy()
 
 # 4 : Convertir la date de naissance en format datetime
 driver_unique_2023.loc[:, 'dob'] = pd.to_datetime(driver_unique_2023['dob'])
+driver_unique_2023[driver_unique_2023['dob'].isna()]
+
 
 # 5 : Calcul de l'âge
 aujourdhui = datetime.now()
