@@ -57,3 +57,8 @@ grouped["différence en seconde"] = grouped["max_time_sec"] - grouped["min_time_
 
 # Afficher les résultats
 print(grouped)
+print("la course avec le plus grand écart de temps entre le premier et le dernier :",
+      max(grouped["différence en seconde"]))
+print("la course avec le plus petit écart de temps entre le premier et le dernier :",
+      min(grouped["différence en seconde"]))
+print("la course avec le plus petit temps de tour rapide :", min(grouped["min_time"]))
