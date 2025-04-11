@@ -20,12 +20,12 @@ races.columns = races.columns.str.strip()
 # Lire le fichier CSV avec Pandas
 results = pd.read_csv(os.path.join("donnees_formule_un","results.csv"))
 results.columns = results.columns.str.strip()
-print(results.columns)
+
 
 races_results = pd.merge(races, results, on='raceId')
 
 
-print(races_results.columns)
+
 
 
 # Lire le fichier CSV des pilotes avec Pandas (en ignorant les lignes incorrectes si nécessaire)
