@@ -3,10 +3,10 @@ import os
 
 #1 pilotes qui ont gagné au moins 30 courses
 
-
 # Lire le fichier CSV avec Pandas
 results = pd.read_csv(os.path.join("donnees_formule_un", "results.csv"))
 results.columns = results.columns.str.strip()
+
 
 def pilotes_30_victoires(results):
     # Compter le nombre de victoires par pilote

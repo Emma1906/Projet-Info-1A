@@ -19,4 +19,3 @@ print(constructors.columns)
 races = pd.read_csv(os.path.join("donnees_formule_un", "races.csv"))
 races.columns = races.columns.str.strip()
 
- 
