@@ -10,7 +10,7 @@
 import pandas as pd
 import os
 
-#importer les tables 
+#importer les tables
 constructors = pd.read_csv(os.path.join("donnees_formule_un", "constructors.csv"))
 constructors.columns = constructors.columns.str.strip()
 constructors_standings = pd.read_csv(os.path.join("donnees_formule_un", "constructor_standings.csv"))
@@ -34,10 +34,8 @@ dernieres_courses = fusion_now.groupby('year')['raceId'].max().reset_index()
 # Filtrer pour ne garder que les lignes correspondant à ces dernières courses
 fusion_finale = pd.merge(fusion_now, dernieres_courses, on=['year', 'raceId'])
 
-fusion_finale = fusion_finale[fusion_finale['position'].isin([1,2,3]) ] 
+fusion_finale = fusion_finale[fusion_finale['position'].isin([1,2,3]) ]
 fusion_finale = fusion_finale[['year', 'constructorId', 'name', 'points', 'position']]
 fusion_finale = fusion_finale.sort_values(by=['year', 'position'])
 
-return fusion_finale
- 
->>>>>>> 3d9f2aa3a12b89f0bc1ee084408369b407529419
+print(fusion_finale)
