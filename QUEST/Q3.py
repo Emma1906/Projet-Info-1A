@@ -36,5 +36,5 @@ fusion_finale = fusion_finale[fusion_finale['position'].isin([1,2,3]) ]
 fusion_finale = fusion_finale[['year', 'constructorId', 'name', 'points', 'position']]
 fusion_finale = fusion_finale.sort_values(by=['year', 'position'])
 
-return fusion_finale
+print(fusion_finale)
  
