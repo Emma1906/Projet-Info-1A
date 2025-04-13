@@ -7,7 +7,7 @@ import os
 races = pd.read_csv(os.path.join("donnees_formule_un", "races.csv"))
 """print(races.columns)"""
 circuits = pd.read_csv(os.path.join("donnees_formule_un", "races.csv"))
-"""print(circuits.columns)"""
+print(circuits.columns)
 fusion = pd.merge(races, circuits, on='raceId')
 """print(fusion.columns)"""
 
