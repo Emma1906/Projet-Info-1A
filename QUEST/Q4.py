@@ -6,11 +6,9 @@ import csv
 # chaque circuit sur l'année 2023 ?
 
 # PANDA
-# charger et fusionner les tables
+# Charger et fusionner les tables
 laps = pd.read_csv(os.path.join("donnees_formule_un", "lap_times.csv"))
 races = pd.read_csv(os.path.join("donnees_formule_un", "races.csv"))
-print(races.columns)
-print(laps.columns)
 fusion = pd.merge(laps, races, on='raceId')
 fusion.columns = fusion.columns.str.strip()
 # Extraire les années des courses
@@ -22,7 +20,7 @@ meilleur_temps_tour_par_course =\
 meilleur_temps_tour_par_course =\
     pd.merge(meilleur_temps_tour_par_course, fusion[['raceId', 'name']], on='raceId',
              how='left').drop_duplicates()
-# Filtrer sur une année
+# Filtrer sur l'année 2023
 meilleur_temps_tour_par_course_2023 =\
     meilleur_temps_tour_par_course[meilleur_temps_tour_par_course['year'] == 2023]
 # Afficher le temps le plus rapide
@@ -32,13 +30,12 @@ print(meilleur_temps_tour_par_course_2023[['name', 'year', 'milliseconds']])
 
 
 
-####### PYTHON PUR 
+####### PYTHON PUR
 
-# Dictionnaire pour stocker races.csv : {raceId: ligne_race}
+# Lecture et stockage des données 
 races_dict = {}
 race_ids_2023 = set()
 
-# Lire races.csv et stocker les infos de 2023 par raceId
 with open(os.path.join("donnees_formule_un", "races.csv"), 'r', encoding='utf-8') as races_file:
     reader = csv.reader(races_file)
     header_races = next(reader)  # lire l'en-tête
