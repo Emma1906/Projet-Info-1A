@@ -173,3 +173,4 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 fusion_resultat.csv
+fusion_resultat.csv
