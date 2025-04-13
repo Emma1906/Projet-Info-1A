@@ -1,4 +1,4 @@
-"""import pandas as pd
+import pandas as pd
 import os
 
 # 1 pilotes qui ont gagné au moins 30 courses
@@ -98,5 +98,5 @@ def nom_pilotes_30_victoires(results, drivers):
 
 nom_30_victoires = nom_pilotes_30_victoires(results, drivers)
 print(nom_30_victoires)
-
+"""
 
