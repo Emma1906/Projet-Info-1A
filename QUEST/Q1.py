@@ -61,7 +61,8 @@ with open(os.path.join("donnees_formule_un", "results.csv")) as fd:
 
 
 
-
+print(results[1: ])
+"""
 def pilotes_30_victoires(results):
     # Compter le nombre de victoires par pilote
     victoires = results[results['positionOrder'] == 1].groupby('driverId').size()
@@ -98,6 +99,6 @@ def nom_pilotes_30_victoires(results, drivers):
 
 
 nom_30_victoires = nom_pilotes_30_victoires(results, drivers)
-print(nom_30_victoires)
+print(nom_30_victoires)"""
 
 
