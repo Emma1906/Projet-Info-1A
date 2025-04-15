@@ -1,8 +1,7 @@
-"""import pandas as pd
+import pandas as pd
 import os
 
 # 1 pilotes qui ont gagné au moins 30 courses
-
 
 # Lire le fichier CSV avec Pandas
 results = pd.read_csv(os.path.join("donnees_formule_un", "results.csv"))
@@ -61,8 +60,7 @@ with open(os.path.join("donnees_formule_un", "results.csv")) as fd:
 
 
 
-print(results[1: ])
-"""
+
 def pilotes_30_victoires(results):
     # Compter le nombre de victoires par pilote
     victoires = results[results['positionOrder'] == 1].groupby('driverId').size()
@@ -99,6 +97,6 @@ def nom_pilotes_30_victoires(results, drivers):
 
 
 nom_30_victoires = nom_pilotes_30_victoires(results, drivers)
-print(nom_30_victoires)"""
-
+print(nom_30_victoires)
+"""
 
