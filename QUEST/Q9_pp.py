@@ -68,3 +68,6 @@ for cid in compteur_circuits:
 # Résultat final
 nom_circuit = circuits.get(max_circuit_id, "Nom inconnu")
 print(f"Le circuit le plus souvent utilisé est : {nom_circuit} ({max_count} fois)")
+
+# quelle circuit a été le plus couru ?
+# circuitId → nom du circuit
