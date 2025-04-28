@@ -60,3 +60,4 @@ best_time = st_anne.loc[
 
 min_time_row["best_time"] = best_time
 print(min_time_row)
+
