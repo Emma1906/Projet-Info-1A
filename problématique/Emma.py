@@ -6,11 +6,44 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, roc_auc_score
 from sklearn.impute import SimpleImputer
 
+
+
+
+drivers = pd.read_csv(os.path.join("donnees_formule_un", "drivers.csv")\
+    , on_bad_lines='skip')
+drivers.columns = drivers.columns.str.strip()
+drivers["forename"] = drivers["forename"].str.replace('"', '').str.strip()
+drivers["surname"] = drivers["surname"].str.replace('"', '').str.strip()
+drivers["nom_complet"] = drivers["forename"] + " " + drivers["surname"]
+
+constructors = pd.read_csv(os.path.join("donnees_formule_un", "constructors.csv"))
+constructors.columns = constructors.columns.str.strip()
+
+results = pd.read_csv(os.path.join("donnees_formule_un", "results.csv"))
+results.columns = results.columns.str.strip()
+
+races = pd.read_csv(os.path.join("donnees_formule_un", "races.csv"))
+races.columns = races.columns.str.strip()
+
+qualifying = pd.read_csv(os.path.join("donnees_formule_un", "qualifying.csv"))
+qualifying.columns = qualifying.columns.str.strip()
+
+
+table_1 = pd.merge(races, results, on= "raceId")
+table_2 = pd.merge(table_1, constructors, on = "constructorId")
+table_3 = pd.merge(table_2, qualifying, on = "driverId")
+print(table_3.columns)
+table = pd.merge(table_3, drivers, on = "driverId")
+
+
+print(table.columns)
+#sélectionner les variables dans la table
+table = table[['raceId_x', 'year', 'name_x', 'nom_complet', 'name_y', 'positionOrder']]
 # 1. Charger les données
 
 
 # 2. Créer la cible
-df['sur_podium'] = df['positionOrder'].apply(lambda x: 1 if x <= 3 else 0)
+table['sur_podium'] = table['positionOrder'].apply(lambda x: 1 if x <= 3 else 0)
 
 # 3. Feature Engineering
 #df['rookie'] = df['experience_ans'].apply(lambda x: 1 if x < 2 else 0)
@@ -19,8 +52,8 @@ df['sur_podium'] = df['positionOrder'].apply(lambda x: 1 if x <= 3 else 0)
 # Imputer la moyenne sur nb_victoires et nb_podiums
 imputer = SimpleImputer(strategy='mean')
 
-first_places_counts = races_results_2023[races_results_2023['positionOrder'] == 1].groupby('driverId').size()
-df = pd.merge(df, first_places_counts, on='driverId', how='left')
+nb_victoires_2ans = table[table['positionOrder'] == 1].groupby('nom_complet').size()
+df = pd.merge(table, nb_victoires_2ans, on='nom_complet', how='left')
 print(df.columns)
 df[['nb_victoires_2ans', 'nb_podiums_2ans']] = imputer.fit_transform(df[['nb_victoires_2ans', 'nb_podiums_2ans']])
 
