@@ -272,6 +272,33 @@ def nb_victoires_spa(results, races, drivers):
     return phrase + "\n" + "\n".join(lignes)
 
 
+# Question 7
+
+def pilote_plus_accidents(results, status, annee):
+    fusion = pd.merge(results, status, on='statusId')
+    fusion.columns = fusion.columns.str.strip()
+    fusion_now = pd.merge(fusion, races, on='raceId')
+    fusion_now.columns = fusion_now.columns.str.strip()
+    fusion_v2 = pd.merge(fusion_now, drivers[['driverId', 'nom_complet']], on='driverId')
+    fusion_v2.columns = fusion_v2.columns.str.strip()
+    #compter le nombre d'accidents pour chaque pilote, status = Accident
+    fusion_v2['status'] = fusion_v2['status'].str.strip().str.replace('"', '')
+    fusion_v2 = fusion_v2[fusion_v2['status'] == "Accident"]
+    # Compter le nombre d'accidents par pilote et par année
+    accidents_par_pilote = fusion_v2.groupby(['year', 'driverId']).size().reset_index(name='nb_accidents')
+    # Garder le pilote avec le plus d'accidents par année
+    accidents_max = accidents_par_pilote.loc[accidents_par_pilote.groupby('year')['nb_accidents'].idxmax()]
+    # Ajouter le nom du pilote
+    accidents_max = accidents_max.merge(drivers[['driverId', 'nom_complet']], on='driverId', how='left')
+    # Garder les colonnes finales
+    accidents_max = accidents_max[accidents_max['year']== annee]
+    
+    # Afficher
+    if accidents_max.empty:
+        return f"Aucun accident enregistré en {annee}."
+    pilote = accidents_max.iloc[0]
+    return f"Le pilote ayant eu le plus d'accidents en {annee} est {pilote['nom_complet']} avec {pilote['nb_accidents']} accident(s)."
+
 # Question 8
 
 def filtrer_pit_stops(df):

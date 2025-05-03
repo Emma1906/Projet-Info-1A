@@ -15,7 +15,8 @@ from questions_interface import (
     circuit_plus_concouru,
     victoires_par_nation,
     age_moyen_annee,
-    course_plus_serrée
+    course_plus_serrée,
+    pilote_plus_accidents
 )
 
 # === Chargement des données ===
@@ -46,6 +47,9 @@ results.columns = results.columns.str.strip()
 pit = pd.read_csv(os.path.join("donnees_formule_un", "pit_stops.csv"))
 pit.columns = pit.columns.str.strip()
 
+status = pd.read_csv(os.path.join("donnees_formule_un", "status.csv"))
+status.columns = status.columns.str.strip()
+
 
 # ======== Fonctions associées aux questions ===========
 
@@ -72,6 +76,8 @@ def repondre_q5():
 def repondre_q6():
     return nb_victoires_spa(results, races, drivers)
 
+def repondre_q7():
+    return pilote_plus_accidents(results, status)
 
 def repondre_q8():
     return temps_moyen_pit_stop_an(races, pit)
@@ -101,6 +107,7 @@ qa_functions = {
     "Quel est le nombre de best lap time par pilote en 2023 ?": repondre_q5,
     "Quels pilotes ont remporté le plus de fois le circuit de Spa-Francorchamps\
 depuis 1950 ?": repondre_q6,
+    "Quel est le pilote qui a eu le plus d'accidents par saison?": repondre_q7,
     "Quel est le temps moyen des pit stop par an ?": repondre_q8,
     "Quels circuits ont été le plus de fois concourus ? ": repondre_q9,
     "Quelle a été la course la plus sérrée ?": repondre_q10,
@@ -135,6 +142,10 @@ def show_page_podium_ecuries():
         pages["podium"] = create_page_podium_ecuries()
     show_frame(pages["podium"])
 
+def show_page_pilote_accidents():
+    if "accidents" not in pages:
+        pages["accidents"] = create_page_pilote_accidents()
+    show_frame(pages["accidents"])
 
 def show_page_age_moyen():
     if "age" not in pages:
@@ -315,6 +326,33 @@ def create_page_temps_moyen_pit_stop_an():
     tk.Button(frame, text="Retour", command=lambda: show_frame(page_menu), bg="#444", fg="white").pack(pady=10)
     return frame
 
+def create_page_pilote_accidents():
+    frame = tk.Frame(root, bg="#1e1e2f")
+    frame.place(relwidth=1, relheight=1)
+
+    label = tk.Label(frame, text="Entrez une année entre 1950 et 2023 :", fg="white", bg="#1e1e2f")
+    label.pack(pady=10)
+    entry = tk.Entry(frame)
+    entry.pack()
+    text = tk.Text(frame, height=25, width=90, bg="white", fg="black", wrap=tk.WORD)
+    text.pack(pady=10)
+
+    def valider():
+        try:
+            annee = int(entry.get())
+            if 1950 <= annee <= 2023:
+                reponse = pilote_plus_accidents(results, status, annee)
+            else:
+                reponse = "Année invalide."
+        except:
+            reponse = "Entrée invalide."
+        text.delete("1.0", tk.END)
+        text.insert(tk.END, reponse)
+
+    tk.Button(frame, text="Valider", command=valider, bg="#0066cc", fg="white").pack(pady=5)
+    tk.Button(frame, text="Retour", command=lambda: show_frame(page_menu), bg="#444", fg="white").pack(pady=10)
+    return frame
+
 
 def create_page_best_lap_time_2023():
     frame = tk.Frame(root, bg="#1e1e2f")
@@ -366,6 +404,9 @@ tk.Button(page_menu, text="Quel est le classement des pilotes à l'issu de la sa
 
 tk.Button(page_menu, text="Quel est le temps moyen des pit stop par an ?",
           command=show_page_pit_stop, bg="#0066cc", fg="white", width=90, height=2, wraplength=700).pack(pady=5)
+
+tk.Button(page_menu, text="Quel est le pilote avec le plus d'accidents?",
+          command=show_page_pilote_accidents, bg="#0066cc", fg="white", width=90, height=2, wraplength=700).pack(pady=5)
 
 tk.Button(page_menu, text="Quel est le nombre de victoires par nation depuis 1950 ?",
           command=show_page_victoires_nation, bg="#0066cc", fg="white", width=90, height=2, wraplength=700).pack(pady=5)
