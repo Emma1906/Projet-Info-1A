@@ -33,6 +33,7 @@ results.columns = results.columns.str.strip()
 pit = pd.read_csv(os.path.join("donnees_formule_un", "pit_stops.csv"))
 pit.columns = pit.columns.str.strip()
 
+
 # Question 1
 
 def pilotes_30_victoires(results):
@@ -292,12 +293,13 @@ def pilote_plus_accidents(results, status, annee):
     accidents_max = accidents_max.merge(drivers[['driverId', 'nom_complet']], on='driverId', how='left')
     # Garder les colonnes finales
     accidents_max = accidents_max[accidents_max['year']== annee]
-    
+
     # Afficher
     if accidents_max.empty:
         return f"Aucun accident enregistré en {annee}."
     pilote = accidents_max.iloc[0]
     return f"Le pilote ayant eu le plus d'accidents en {annee} est {pilote['nom_complet']} avec {pilote['nb_accidents']} accident(s)."
+
 
 # Question 8
 
