@@ -35,6 +35,8 @@ pit = pd.read_csv(os.path.join("donnees_formule_un", "pit_stops.csv"))
 pit.columns = pit.columns.str.strip()
 
 
+# Quentions utilisées pour l'interface graphique
+
 # Question 1 : Quels pilotes ont remporté au moins 30 courses ?
 
 def nom_pilotes_30_victoires(results, drivers):
