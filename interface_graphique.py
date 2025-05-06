@@ -76,8 +76,10 @@ def repondre_q5():
 def repondre_q6():
     return nb_victoires_spa(results, races, drivers)
 
+
 def repondre_q7():
     return pilote_plus_accidents(results, status)
+
 
 def repondre_q8():
     return temps_moyen_pit_stop_an(races, pit)
@@ -105,9 +107,9 @@ qa_functions = {
     "Quel est le podium des écuries à la fin de chaque saison ?": repondre_q3,
     "Quel est le meilleur temps d'un tour de circuit par course en 2023 ?": repondre_q4,
     "Quel est le nombre de best lap time par pilote en 2023 ?": repondre_q5,
-    "Quels pilotes ont remporté le plus de fois le circuit de Spa-Francorchamps\
+    "Quels pilotes ont remporté le plus de fois le circuit de Spa-Francorchamps \
 depuis 1950 ?": repondre_q6,
-    "Quel est le pilote qui a eu le plus d'accidents par saison?": repondre_q7,
+    "Quel est le pilote qui a eu le plus d'accidents par saison ?": repondre_q7,
     "Quel est le temps moyen des pit stop par an ?": repondre_q8,
     "Quels circuits ont été le plus de fois concourus ? ": repondre_q9,
     "Quelle a été la course la plus sérrée ?": repondre_q10,
@@ -142,10 +144,12 @@ def show_page_podium_ecuries():
         pages["podium"] = create_page_podium_ecuries()
     show_frame(pages["podium"])
 
+
 def show_page_pilote_accidents():
     if "accidents" not in pages:
         pages["accidents"] = create_page_pilote_accidents()
     show_frame(pages["accidents"])
+
 
 def show_page_age_moyen():
     if "age" not in pages:
@@ -247,7 +251,7 @@ def create_page_podium_ecuries():
     frame = tk.Frame(root, bg="#1e1e2f")
     frame.place(relwidth=1, relheight=1)
 
-    label = tk.Label(frame, text="Entrez une année entre 1950 et 2023 :", fg="white", bg="#1e1e2f")
+    label = tk.Label(frame, text="Entrez une année entre 1958 et 2023 :", fg="white", bg="#1e1e2f")
     label.pack(pady=10)
     entry = tk.Entry(frame)
     entry.pack()
@@ -257,7 +261,7 @@ def create_page_podium_ecuries():
     def valider():
         try:
             annee = int(entry.get())
-            if 1950 <= annee <= 2023:
+            if 1958 <= annee <= 2023:
                 reponse = podium_ecuries(constructors_standings, races, constructors, annee)
             else:
                 reponse = "Année invalide."
@@ -326,11 +330,13 @@ def create_page_temps_moyen_pit_stop_an():
     tk.Button(frame, text="Retour", command=lambda: show_frame(page_menu), bg="#444", fg="white").pack(pady=10)
     return frame
 
+
 def create_page_pilote_accidents():
     frame = tk.Frame(root, bg="#1e1e2f")
     frame.place(relwidth=1, relheight=1)
 
-    label = tk.Label(frame, text="Entrez une année entre 1950 et 2023 :", fg="white", bg="#1e1e2f")
+    label = tk.Label(
+        frame, text="Entrez une année entre 1950 et 2023 :", fg="white", bg="#1e1e2f")
     label.pack(pady=10)
     entry = tk.Entry(frame)
     entry.pack()
@@ -349,8 +355,11 @@ def create_page_pilote_accidents():
         text.delete("1.0", tk.END)
         text.insert(tk.END, reponse)
 
-    tk.Button(frame, text="Valider", command=valider, bg="#0066cc", fg="white").pack(pady=5)
-    tk.Button(frame, text="Retour", command=lambda: show_frame(page_menu), bg="#444", fg="white").pack(pady=10)
+    tk.Button(
+        frame, text="Valider", command=valider, bg="#0066cc", fg="white").pack(pady=5)
+    tk.Button(
+        frame, text="Retour", command=lambda: show_frame(
+            page_menu), bg="#444", fg="white").pack(pady=10)
     return frame
 
 
@@ -405,7 +414,7 @@ tk.Button(page_menu, text="Quel est le classement des pilotes à l'issu de la sa
 tk.Button(page_menu, text="Quel est le temps moyen des pit stop par an ?",
           command=show_page_pit_stop, bg="#0066cc", fg="white", width=90, height=2, wraplength=700).pack(pady=5)
 
-tk.Button(page_menu, text="Quel est le pilote avec le plus d'accidents?",
+tk.Button(page_menu, text="Quel est le pilote qui a eu le plus d'accident en fonction des saisons ?",
           command=show_page_pilote_accidents, bg="#0066cc", fg="white", width=90, height=2, wraplength=700).pack(pady=5)
 
 tk.Button(page_menu, text="Quel est le nombre de victoires par nation depuis 1950 ?",
@@ -421,6 +430,7 @@ tk.Button(page_menu, text="Quel est le nombre de best lap time par pilote en 202
 # ======== Boutons statiques =======
 questions_dynamiques = {
     "Quel est le podium des écuries à la fin de chaque saison ?",
+    "Quel est le pilote qui a eu le plus d'accidents par saison ?",
     "Quel est l'âge moyen des pilote en fonction des années ?",
     "Quel est le temps moyen des pit stop par an ?",
     "Quel est le classement des pilotes à l'issu de la saison 2023 ?",
