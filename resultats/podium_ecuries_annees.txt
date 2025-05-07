@@ -1,0 +1,67 @@
+En 2024, le podium des écuries était : Red Bull (373.0 points), suivi de Ferrari (302.0 points) et enfin McLaren (295.0 points).
+En 2023, le podium des écuries était : Red Bull (860.0 points), suivi de Mercedes (409.0 points) et enfin Ferrari (406.0 points).
+En 2022, le podium des écuries était : Red Bull (759.0 points), suivi de Ferrari (554.0 points) et enfin Mercedes (515.0 points).
+En 2021, le podium des écuries était : Mercedes (613.5 points), suivi de Red Bull (585.5 points) et enfin Ferrari (323.5 points).
+En 2020, le podium des écuries était : Mercedes (573.0 points), suivi de Red Bull (319.0 points) et enfin McLaren (202.0 points).
+En 2019, le podium des écuries était : Mercedes (739.0 points), suivi de Ferrari (504.0 points) et enfin Red Bull (417.0 points).
+En 2018, le podium des écuries était : Mercedes (655.0 points), suivi de Ferrari (571.0 points) et enfin Red Bull (419.0 points).
+En 2017, le podium des écuries était : Mercedes (668.0 points), suivi de Ferrari (522.0 points) et enfin Red Bull (368.0 points).
+En 2016, le podium des écuries était : Mercedes (765.0 points), suivi de Red Bull (468.0 points) et enfin Ferrari (398.0 points).
+En 2015, le podium des écuries était : Mercedes (703.0 points), suivi de Ferrari (428.0 points) et enfin Williams (257.0 points).
+En 2014, le podium des écuries était : Mercedes (701.0 points), suivi de Red Bull (405.0 points) et enfin Williams (320.0 points).
+En 2013, le podium des écuries était : Red Bull (596.0 points), suivi de Mercedes (360.0 points) et enfin Ferrari (354.0 points).
+En 2012, le podium des écuries était : Red Bull (460.0 points), suivi de Ferrari (400.0 points) et enfin McLaren (378.0 points).
+En 2011, le podium des écuries était : Red Bull (650.0 points), suivi de McLaren (497.0 points) et enfin Ferrari (375.0 points).
+En 2010, le podium des écuries était : Red Bull (498.0 points), suivi de McLaren (454.0 points) et enfin Ferrari (396.0 points).
+En 2009, le podium des écuries était : Brawn (172.0 points), suivi de Red Bull (153.5 points) et enfin McLaren (71.0 points).
+En 2008, le podium des écuries était : Ferrari (172.0 points), suivi de McLaren (151.0 points) et enfin BMW Sauber (135.0 points).
+En 2007, le podium des écuries était : Ferrari (204.0 points), suivi de BMW Sauber (101.0 points) et enfin Renault (51.0 points).
+En 2006, le podium des écuries était : Renault (206.0 points), suivi de Ferrari (201.0 points) et enfin McLaren (110.0 points).
+En 2005, le podium des écuries était : Renault (191.0 points), suivi de McLaren (182.0 points) et enfin Ferrari (100.0 points).
+En 2004, le podium des écuries était : Ferrari (262.0 points), suivi de BAR (119.0 points) et enfin Renault (105.0 points).
+En 2003, le podium des écuries était : Ferrari (158.0 points), suivi de Williams (144.0 points) et enfin McLaren (142.0 points).
+En 2002, le podium des écuries était : Ferrari (221.0 points), suivi de Williams (92.0 points) et enfin McLaren (65.0 points).
+En 2001, le podium des écuries était : Ferrari (179.0 points), suivi de McLaren (102.0 points) et enfin Williams (80.0 points).
+En 2000, le podium des écuries était : Ferrari (170.0 points), suivi de McLaren (162.0 points) et enfin Williams (36.0 points).
+En 1999, le podium des écuries était : Ferrari (128.0 points), suivi de McLaren (124.0 points) et enfin Jordan (61.0 points).
+En 1998, le podium des écuries était : McLaren (156.0 points), suivi de Ferrari (133.0 points) et enfin Williams (38.0 points).
+En 1997, le podium des écuries était : Williams (123.0 points), suivi de Ferrari (102.0 points) et enfin Benetton (67.0 points).
+En 1996, le podium des écuries était : Williams (175.0 points), suivi de Ferrari (70.0 points) et enfin Benetton (68.0 points).
+En 1995, le podium des écuries était : Benetton (147.0 points), suivi de Williams (118.0 points) et enfin Ferrari (73.0 points).
+En 1994, le podium des écuries était : Williams (118.0 points), suivi de Benetton (103.0 points) et enfin Ferrari (71.0 points).
+En 1993, le podium des écuries était : Williams (168.0 points), suivi de McLaren (84.0 points) et enfin Benetton (72.0 points).
+En 1992, le podium des écuries était : Williams (164.0 points), suivi de McLaren (99.0 points) et enfin Benetton (91.0 points).
+En 1991, le podium des écuries était : McLaren (139.0 points), suivi de Williams (125.0 points) et enfin Ferrari (55.5 points).
+En 1990, le podium des écuries était : McLaren (121.0 points), suivi de Ferrari (110.0 points) et enfin Benetton (71.0 points).
+En 1989, le podium des écuries était : McLaren (141.0 points), suivi de Williams (77.0 points) et enfin Ferrari (59.0 points).
+En 1988, le podium des écuries était : McLaren (199.0 points), suivi de Ferrari (65.0 points) et enfin Benetton (39.0 points).
+En 1987, le podium des écuries était : Williams (137.0 points), suivi de McLaren (76.0 points) et enfin Team Lotus (64.0 points).
+En 1986, le podium des écuries était : Williams (141.0 points), suivi de McLaren (96.0 points) et enfin Team Lotus (58.0 points).
+En 1985, le podium des écuries était : McLaren (90.0 points), suivi de Ferrari (82.0 points) et enfin Williams (71.0 points).
+En 1984, le podium des écuries était : McLaren (143.5 points), suivi de Ferrari (57.5 points) et enfin Team Lotus (47.0 points).
+En 1983, le podium des écuries était : Ferrari (89.0 points), suivi de Renault (79.0 points) et enfin Brabham (72.0 points).
+En 1982, le podium des écuries était : Ferrari (74.0 points), suivi de McLaren (69.0 points) et enfin Renault (62.0 points).
+En 1981, le podium des écuries était : Williams (95.0 points), suivi de Brabham (61.0 points) et enfin Renault (54.0 points).
+En 1980, le podium des écuries était : Williams (120.0 points), suivi de Ligier (66.0 points) et enfin Brabham (55.0 points).
+En 1979, le podium des écuries était : Ferrari (113.0 points), suivi de Williams (75.0 points) et enfin Ligier (61.0 points).
+En 1978, le podium des écuries était : Team Lotus (86.0 points), suivi de Ferrari (58.0 points) et enfin Brabham (53.0 points).
+En 1977, le podium des écuries était : Ferrari (95.0 points), suivi de Team Lotus (62.0 points) et enfin McLaren (60.0 points).
+En 1976, le podium des écuries était : Ferrari (83.0 points), suivi de McLaren (74.0 points) et enfin Tyrrell (71.0 points).
+En 1975, le podium des écuries était : Ferrari (72.5 points), suivi de Brabham (54.0 points) et enfin McLaren (53.0 points).
+En 1974, le podium des écuries était : McLaren (73.0 points), suivi de Ferrari (65.0 points) et enfin Tyrrell (52.0 points).
+En 1973, le podium des écuries était : Team Lotus (92.0 points), suivi de Tyrrell (82.0 points) et enfin McLaren (58.0 points).
+En 1972, le podium des écuries était : Team Lotus (61.0 points), suivi de Tyrrell (51.0 points) et enfin McLaren (47.0 points).
+En 1971, le podium des écuries était : Tyrrell (73.0 points), suivi de BRM (36.0 points) et enfin Ferrari (33.0 points).
+En 1970, le podium des écuries était : Team Lotus (59.0 points), suivi de Ferrari (52.0 points) et enfin March (48.0 points).
+En 1969, le podium des écuries était : Matra-Ford (66.0 points), suivi de Brabham-Ford (49.0 points) et enfin Lotus-Ford (47.0 points).
+En 1968, le podium des écuries était : Lotus-Ford (62.0 points), suivi de McLaren-Ford (49.0 points) et enfin Matra-Ford (45.0 points).
+En 1967, le podium des écuries était : Brabham-Repco (63.0 points), suivi de Lotus-Ford (44.0 points) et enfin Cooper-Maserati (28.0 points).
+En 1966, le podium des écuries était : Brabham-Repco (42.0 points), suivi de Ferrari (31.0 points) et enfin Cooper-Maserati (30.0 points).
+En 1965, le podium des écuries était : Lotus-Climax (54.0 points), suivi de BRM (45.0 points) et enfin Brabham-Climax (27.0 points).
+En 1964, le podium des écuries était : Ferrari (45.0 points), suivi de BRM (42.0 points) et enfin Lotus-Climax (37.0 points).
+En 1963, le podium des écuries était : Lotus-Climax (54.0 points), suivi de BRM (36.0 points) et enfin Brabham (28.0 points).
+En 1962, le podium des écuries était : BRM (42.0 points), suivi de Lotus-Climax (36.0 points) et enfin Cooper-Climax (29.0 points).
+En 1961, le podium des écuries était : Ferrari (45.0 points), suivi de Lotus-Climax (35.0 points) et enfin Porsche (22.0 points).
+En 1960, le podium des écuries était : Cooper-Climax (48.0 points), suivi de Team Lotus (34.0 points) et enfin Ferrari (26.0 points).
+En 1959, le podium des écuries était : Cooper-Climax (40.0 points), suivi de Ferrari (32.0 points) et enfin BRM (18.0 points).
+En 1958, le podium des écuries était : Vanwall (48.0 points), suivi de Ferrari (40.0 points) et enfin Cooper (31.0 points).

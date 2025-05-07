@@ -1,0 +1,9 @@
+Les pilotes ayant au moins 30 victoires sont :
+- Lewis Hamilton (104 victoires)
+- Michael Schumacher (91 victoires)
+- Max Verstappen (61 victoires)
+- Sebastian Vettel (53 victoires)
+- Alain Prost (51 victoires)
+- Ayrton Senna (41 victoires)
+- Fernando Alonso (32 victoires)
+- Nigel Mansell (31 victoires)

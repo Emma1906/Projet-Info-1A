@@ -19,6 +19,10 @@ from questions_interface import (
     pilote_plus_accidents
 )
 
+# Création du dossier de sortie
+output_dir = "resultats"
+os.makedirs(output_dir, exist_ok=True)
+
 # === Chargement des données ===
 constructors = pd.read_csv(os.path.join("donnees_formule_un", "constructors.csv"))
 constructors.columns = constructors.columns.str.strip()
@@ -259,6 +263,10 @@ def create_page_classement_pilote_2023():
     ax.set_title("Classement des pilotes - Saison 2023")
     ax.invert_yaxis()
     fig.tight_layout()
+    
+    # Sauvegarde de l'image
+    plt.savefig(os.path.join(output_dir, "classement_pilotes_2023.png"))
+    plt.show()
 
     # Intégration dans Tkinter
     canvas = FigureCanvasTkAgg(fig, master=frame)
@@ -295,6 +303,10 @@ def create_page_victoires_par_nation():
     ax.set_title('Nombre de victoires par nation depuis 1950.')
     ax.invert_yaxis()
     fig.tight_layout()
+    
+    # Sauvegarde de l'image
+    plt.savefig(os.path.join(output_dir, "victoires_par_nations.png"))
+    plt.show()
 
     # Intégration du graphique dans Tkinter
     canvas = FigureCanvasTkAgg(fig, master=frame)
@@ -538,6 +550,10 @@ def create_page_best_lap_time_2023():
     ax.set_xticks(range(len(meilleur_temps_par_pilote)))
     ax.set_xticklabels(meilleur_temps_par_pilote['nom_complet'], rotation=45, ha='right')
     fig.tight_layout()
+    
+    # Sauvegarde de l'image
+    plt.savefig(os.path.join(output_dir, "best_lap_times_par_pilote_2023.png"))
+    plt.show()
 
     # Intégration dans Tkinter
     canvas = FigureCanvasTkAgg(fig, master=frame)

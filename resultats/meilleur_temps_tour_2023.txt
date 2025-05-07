@@ -1,0 +1,23 @@
+Voici les meilleurs temps d'un tour de circuit par course en 2023:
+Bahrain Grand Prix : 93996 ms
+Saudi Arabian Grand Prix : 91906 ms
+Australian Grand Prix : 80235 ms
+Azerbaijan Grand Prix : 103370 ms
+Miami Grand Prix : 89708 ms
+Monaco Grand Prix : 75650 ms
+Spanish Grand Prix : 76330 ms
+Canadian Grand Prix : 74481 ms
+Austrian Grand Prix : 67012 ms
+British Grand Prix : 90275 ms
+Hungarian Grand Prix : 80504 ms
+Belgian Grand Prix : 107305 ms
+Dutch Grand Prix : 73837 ms
+Italian Grand Prix : 85072 ms
+Singapore Grand Prix : 95867 ms
+Japanese Grand Prix : 94183 ms
+Qatar Grand Prix : 84319 ms
+United States Grand Prix : 98139 ms
+Mexico City Grand Prix : 81334 ms
+São Paulo Grand Prix : 72486 ms
+Las Vegas Grand Prix : 95490 ms
+Abu Dhabi Grand Prix : 86993 ms
