@@ -1,0 +1,60 @@
+feature,coefficient
+nb_victoire_x_Alpine F1 Team,1.0347623290821177
+ecurie_Alpine F1 Team,1.0347623290821177
+ecurie_Aston Martin,0.7061450209423692
+position_y_inverse,0.49221743023847997
+ecurie_Red Bull_x_pos_inv,0.34340510235609173
+ecurie_Ferrari_x_pos_inv,0.3022478762766078
+nb_podium_x_Mercedes,0.2621928652413661
+nb_podium_x_Red Bull,0.1556569916234025
+ecurie_McLaren_x_pos_inv,0.14288652257575388
+nb_podium_x_Williams,0.13393722401821176
+nb_victoire_x_Red Bull,0.09273182479695428
+ecurie_Mercedes,0.08003122082489568
+nb_podium_x_McLaren,0.06506502265374127
+nb_podium_ecurie_3_ans,0.06363546370283839
+nb_podium_3_ans,0.03721791812072136
+ecurie_Aston Martin_x_pos_inv,0.029511991613217617
+nb_victoire_x_Williams,0.020605726771920435
+ecurie_Mercedes_x_pos_inv,0.017658920379752543
+nb_podium_x_Ferrari,0.016411956708258266
+grid_x_nb_victoire,0.0046714209535276534
+position_y_x_nb_podium_3_ans,0.004011547740682399
+position_y_x_nb_victoire_3_ans,0.003463831919081311
+nb_victoire_x_Ferrari,0.002610993112692984
+nb_podium_x_Aston Martin,0.0024709306209124435
+ecurie_Red Bull,0.0016559254428033284
+ecurie_Ferrari,0.0003729990160972487
+nb_podium_x_RB F1 Team,0.0
+ecurie_Sauber_x_pos_inv,0.0
+ecurie_RB F1 Team_x_pos_inv,0.0
+ecurie_Sauber,0.0
+ecurie_RB F1 Team,0.0
+nb_victoire_x_Sauber,0.0
+nb_victoire_x_Aston Martin,0.0
+nb_podium_x_Sauber,0.0
+nb_victoire_x_RB F1 Team,0.0
+nb_victoire_x_Haas F1 Team,0.0
+nb_podium_x_Haas F1 Team,0.0
+grid_x_nb_podium,-0.0005763022147286671
+nb_podium_x_AlphaTauri,-0.005620845166337217
+ecurie_AlphaTauri_x_pos_inv,-0.009493975377081446
+nb_victoire_3_ans,-0.0176925736749048
+nb_victoire_x_Alfa Romeo,-0.03551923779079384
+ecurie_Alfa Romeo_x_pos_inv,-0.04361004678500083
+ecurie_Williams_x_pos_inv,-0.04379456316573963
+nb_victoire_x_AlphaTauri,-0.04907918659099355
+ecurie_McLaren,-0.07287024478528284
+ecurie_Alpine F1 Team_x_pos_inv,-0.09665336906689416
+ecurie_Haas F1 Team_x_pos_inv,-0.14994102856968472
+ecurie_AlphaTauri,-0.16226936991804233
+nb_podium_x_Alpine F1 Team,-0.17576706629771488
+grid,-0.2442974590961226
+position_y,-0.3084785571957272
+ecurie_Alfa Romeo,-0.3564733061160942
+ecurie_Williams,-0.3900029490917812
+nb_podium_x_Alfa Romeo,-0.3907116156987977
+nb_victoire_ecurie_3_ans,-0.45641184067075763
+nb_victoire_x_McLaren,-0.6532304623622219
+ecurie_Haas F1 Team,-0.8292888587338454
+nb_victoire_x_Mercedes,-0.8692938276897358
