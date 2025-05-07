@@ -264,9 +264,6 @@ def create_page_classement_pilote_2023():
     ax.invert_yaxis()
     fig.tight_layout()
     
-    # Sauvegarde de l'image
-    plt.savefig(os.path.join(output_dir, "classement_pilotes_2023.png"))
-    plt.show()
 
     # Intégration dans Tkinter
     canvas = FigureCanvasTkAgg(fig, master=frame)
@@ -304,9 +301,6 @@ def create_page_victoires_par_nation():
     ax.invert_yaxis()
     fig.tight_layout()
     
-    # Sauvegarde de l'image
-    plt.savefig(os.path.join(output_dir, "victoires_par_nations.png"))
-    plt.show()
 
     # Intégration du graphique dans Tkinter
     canvas = FigureCanvasTkAgg(fig, master=frame)
@@ -551,9 +545,6 @@ def create_page_best_lap_time_2023():
     ax.set_xticklabels(meilleur_temps_par_pilote['nom_complet'], rotation=45, ha='right')
     fig.tight_layout()
     
-    # Sauvegarde de l'image
-    plt.savefig(os.path.join(output_dir, "best_lap_times_par_pilote_2023.png"))
-    plt.show()
 
     # Intégration dans Tkinter
     canvas = FigureCanvasTkAgg(fig, master=frame)
